@@ -6,3 +6,4 @@ export const FIREBASE_CONFIG = var config = {
     storageBucket: "ionicgta.appspot.com",
     messagingSenderId: "570167287361"
   };
+  firebase.initializeApp(config);  

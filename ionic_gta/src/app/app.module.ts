@@ -8,6 +8,12 @@ import { MyApp } from './app.component';
 import { FIREBASE_CONFIG } from './app.firebase.config';
 import { LoginPage } from '../pages/login/login';
 import { AngularFireAuth} from 'angularfire2/auth';
+import { CalendarioPage } from '../pages/calendario/calendario';
+import { EquipoPage } from '../pages/equipo/equipo';
+import { JugadoresPage } from '../pages/jugadores/jugadores';
+import { JornadasPage } from '../pages/jornadas/jornadas';
+import { TabsPage } from '../pages/tabs/tabs';
+import { Calendar } from '@ionic-native/calendar';
 
 
 
@@ -15,25 +21,36 @@ import { AngularFireAuth} from 'angularfire2/auth';
   declarations: [
     MyApp,
     LoginPage,
+    CalendarioPage,
+    EquipoPage,
+    JugadoresPage,
+    JornadasPage,
+    TabsPage
 
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
-    
+    Calendar,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     LoginPage,
+    CalendarioPage,
+    EquipoPage,
+    JugadoresPage,
+    JornadasPage,
+    TabsPage,
 
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AngularFireAuth
+    AngularFireAuth,
+    Calendar,
   ]
 })
 export class AppModule {}

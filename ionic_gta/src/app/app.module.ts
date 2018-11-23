@@ -13,7 +13,8 @@ import { EquipoPage } from '../pages/equipo/equipo';
 import { JugadoresPage } from '../pages/jugadores/jugadores';
 import { JornadasPage } from '../pages/jornadas/jornadas';
 import { TabsPage } from '../pages/tabs/tabs';
-import { Calendar } from '@ionic-native/calendar';
+import {NgCalendarModule} from 'ionic2-calendar';
+
 
 
 
@@ -29,10 +30,10 @@ import { Calendar } from '@ionic-native/calendar';
 
   ],
   imports: [
+    NgCalendarModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
-    Calendar,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -50,7 +51,6 @@ import { Calendar } from '@ionic-native/calendar';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AngularFireAuth,
-    Calendar,
   ]
 })
 export class AppModule {}

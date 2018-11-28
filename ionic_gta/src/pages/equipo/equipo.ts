@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 
 /**
  * Generated class for the EquipoPage page.
@@ -14,12 +14,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'equipo.html',
 })
 export class EquipoPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  
+  jugadores:any[] = []; 
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl:ModalController) {
   }
+  
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad EquipoPage');
   }
-
 }
